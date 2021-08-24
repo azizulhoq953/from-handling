@@ -39,7 +39,7 @@ func main() {
 	http.HandleFunc("/features", features)
 	http.HandleFunc("/docs", docs)
 	http.Handle("/resources/", http.StripPrefix("/resources/", http.FileServer(http.Dir("assets"))))
-	http.ListenAndServe(":8888", nil)
+	http.ListenAndServe(":80", nil)
 }
 
 func home(w http.ResponseWriter, r *http.Request) {
